@@ -2,6 +2,7 @@ using Serilog;
 using ConsolidadorReportes.Configuration;
 using ConsolidadorReportes.Models;
 using ConsolidadorReportes.Repositories;
+using Microsoft.Extensions.Options;
 
 namespace ConsolidadorReportes.Services;
 
@@ -12,22 +13,20 @@ public class ConsolidadorService : IConsolidadorService
     private readonly IDirectoryScanner _directoryScanner;
     private readonly IExcelReader _excelReader;
     private readonly IBackupService _backupService;
-
-    // Estos se inyectarán en fases posteriores
-    private readonly IExcelWriter? _excelWriter;
-    private readonly IDataCleaner? _dataCleaner;
+    private readonly IExcelWriter _excelWriter;
+    private readonly IDataCleaner _dataCleaner;
 
     public ConsolidadorService(
         ILogger logger,
-        AppSettings settings,
+        IOptions<AppSettings> settings,
         IDirectoryScanner directoryScanner,
         IExcelReader excelReader,
         IBackupService backupService,
-        IExcelWriter? excelWriter = null,
-        IDataCleaner? dataCleaner = null)
+        IExcelWriter excelWriter,
+        IDataCleaner dataCleaner)
     {
         _logger = logger;
-        _settings = settings;
+        _settings = settings.Value;
         _directoryScanner = directoryScanner;
         _excelReader = excelReader;
         _backupService = backupService;
@@ -94,7 +93,7 @@ public class ConsolidadorService : IConsolidadorService
                 }
                 catch (Exception ex)
                 {
-                    _logger.Error(ex, "  ✗ Error al procesar archivo");
+                    _logger.Error(ex, "Error al procesar archivo");
                     stats.ArchivosFallidos++;
                     stats.ArchivosConError.Add($"{Path.GetFileName(archivo)}: {ex.Message}");
                 }
@@ -117,8 +116,16 @@ public class ConsolidadorService : IConsolidadorService
                 ultimoNumReporte);
 
             stats.TotalFilasBaseDatos = consolidado.BaseDatosConsolidada.Count;
+            stats.NumInicioBaseDatos = consolidado.NumInicioBaseDatos;
+            stats.NumFinBaseDatos = consolidado.NumFinBaseDatos;
+
             stats.TotalFilasPlaneacion = consolidado.PlaneacionConsolidada.Count;
+            stats.NumInicioPlaneacion = consolidado.NumInicioPlaneacion;
+            stats.NumFinPlaneacion = consolidado.NumFinPlaneacion;
+
             stats.TotalFilasReporte = consolidado.ReporteConsolidado.Count;
+            stats.NumInicioReporte = consolidado.NumInicioReporte;
+            stats.NumFinReporte = consolidado.NumFinReporte;
 
             _logger.Information("  BASE DE DATOS: {Filas} filas (NUM {Inicio}-{Fin})",
                 stats.TotalFilasBaseDatos, consolidado.NumInicioBaseDatos, consolidado.NumFinBaseDatos);
@@ -127,20 +134,13 @@ public class ConsolidadorService : IConsolidadorService
             _logger.Information("  REPORTE: {Filas} filas (NUM {Inicio}-{Fin})",
                 stats.TotalFilasReporte, consolidado.NumInicioReporte, consolidado.NumFinReporte);
 
-            // 6. Escribir archivo maestro (se implementará en FASE 4)
-            if (_excelWriter != null)
-            {
-                _logger.Information("----------------------------------------");
-                _logger.Information("Escribiendo archivo maestro (modo APPEND)...");
-                await _excelWriter.EscribirMaestroAsync(rutaMaestro, consolidado);
-            }
-            else
-            {
-                _logger.Warning("ExcelWriter no disponible, saltando escritura (FASE 4)");
-            }
+            // 6. Escribir archivo maestro
+            _logger.Information("----------------------------------------");
+            _logger.Information("Escribiendo archivo maestro (modo APPEND)...");
+            await _excelWriter.EscribirMaestroAsync(rutaMaestro, consolidado);
 
-            // 7. Limpiar archivos origen (se implementará en FASE 4)
-            if (_settings.Options.LimpiarArchivosOrigen && _dataCleaner != null)
+            // 7. Limpiar archivos origen
+            if (_settings.Options.LimpiarArchivosOrigen)
             {
                 _logger.Information("----------------------------------------");
                 _logger.Information("Limpiando archivos origen...");
@@ -163,13 +163,9 @@ public class ConsolidadorService : IConsolidadorService
                     }
                     catch (Exception ex)
                     {
-                        _logger.Error(ex, "  ✗ Error al limpiar archivo");
+                        _logger.Error(ex, "Error al limpiar archivo");
                     }
                 }
-            }
-            else if (_settings.Options.LimpiarArchivosOrigen)
-            {
-                _logger.Warning("DataCleaner no disponible, saltando limpieza (FASE 4)");
             }
 
             // 8. Resumen final

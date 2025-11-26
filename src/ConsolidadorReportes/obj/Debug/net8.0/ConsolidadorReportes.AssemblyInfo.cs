@@ -10,13 +10,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ConsolidadorReportes")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Automatización de Reportes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("ConsolidadorReportes")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Sistema de consolidación automática de reportes Excel con renumeración incrementa" +
+    "l")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0+e10fa4bff75bdfe31b25cdf18a1f22aa96fc30dd")]
+[assembly: System.Reflection.AssemblyProductAttribute("Consolidador de Reportes Semanales")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsolidadorReportes")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 

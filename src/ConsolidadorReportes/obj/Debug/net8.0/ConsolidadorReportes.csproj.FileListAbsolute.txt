@@ -36,3 +36,13 @@ C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\s
 C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\obj\Debug\net8.0\ConsolidadorReportes.genruntimeconfig.cache
 C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\obj\Debug\net8.0\ref\ConsolidadorReportes.dll
 C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\appsettings.json
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\obj\Debug\net8.0\ConsolidadorReportes.sourcelink.json
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll

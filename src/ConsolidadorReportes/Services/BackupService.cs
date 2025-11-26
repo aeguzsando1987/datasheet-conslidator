@@ -1,5 +1,6 @@
 using Serilog;
 using ConsolidadorReportes.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace ConsolidadorReportes.Services;
 
@@ -8,10 +9,10 @@ public class BackupService : IBackupService
     private readonly ILogger _logger;
     private readonly AppSettings _settings;
 
-    public BackupService(ILogger logger, AppSettings settings)
+    public BackupService(ILogger logger, IOptions<AppSettings> settings)
     {
         _logger = logger;
-        _settings = settings;
+        _settings = settings.Value;
     }
 
     public async Task<string> CrearBackupMaestroAsync(string rutaMaestro)

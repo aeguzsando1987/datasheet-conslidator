@@ -2,6 +2,7 @@ using ClosedXML.Excel;
 using Serilog;
 using ConsolidadorReportes.Configuration;
 using ConsolidadorReportes.Models;
+using Microsoft.Extensions.Options;
 
 namespace ConsolidadorReportes.Repositories;
 
@@ -10,10 +11,42 @@ public class ExcelReader : IExcelReader
     private readonly ILogger _logger;
     private readonly AppSettings _settings;
 
-    public ExcelReader(ILogger logger, AppSettings settings)
+    public ExcelReader(ILogger logger, IOptions<AppSettings> settings)
     {
         _logger = logger;
-        _settings = settings;
+        _settings = settings.Value;
+    }
+
+    /// <summary>
+    /// Obtiene el valor de una celda de forma segura sin intentar evaluar formulas
+    /// Usa el valor en cache (ultimo valor calculado por Excel)
+    /// </summary>
+    private string ObtenerValorCelda(IXLCell celda)
+    {
+        if (celda == null || celda.IsEmpty())
+            return string.Empty;
+
+        try
+        {
+            // Intentar obtener el valor directamente
+            if (celda.TryGetValue(out string valor))
+            {
+                return valor ?? string.Empty;
+            }
+
+            // Si tiene formula, usar el valor en cache (ultimo valor calculado)
+            if (celda.HasFormula)
+            {
+                return celda.CachedValue.ToString();
+            }
+
+            // Como ultimo recurso, convertir el valor a string
+            return celda.Value.ToString();
+        }
+        catch
+        {
+            return string.Empty;
+        }
     }
 
     public ReporteData LeerArchivo(string rutaArchivo)
@@ -74,26 +107,26 @@ public class ExcelReader : IExcelReader
             var baseDatos = new BaseDatosRow
             {
                 // NUM se ignorará (será renumerado)
-                RESPONSABLE = row.Cell(2).GetString(),
-                REGION = row.Cell(3).GetString(),
-                SEMANA = row.Cell(4).GetString(),
+                RESPONSABLE = ObtenerValorCelda(row.Cell(2)),
+                REGION = ObtenerValorCelda(row.Cell(3)),
+                SEMANA = ObtenerValorCelda(row.Cell(4)),
                 FECHA = row.Cell(5).TryGetValue(out DateTime fecha) ? fecha : null,
-                CLASIFICACION = row.Cell(6).GetString(),
-                NOMBRE_DE_LA_EMPRESA = row.Cell(7).GetString(),
-                GIRO = row.Cell(8).GetString(),
-                SECTOR = row.Cell(9).GetString(),
-                ESTADO = row.Cell(10).GetString(),
-                CIUDAD = row.Cell(11).GetString(),
-                DOMICILIO = row.Cell(12).GetString(),
-                CONTACTO = row.Cell(13).GetString(),
-                PUESTO = row.Cell(14).GetString(),
-                EMAIL = row.Cell(15).GetString(),
-                TELEFONO = row.Cell(16).GetString(),
-                WHATSAPP = row.Cell(17).GetString(),
-                FUENTE_DE_INFORMACION = row.Cell(18).GetString(),
-                B2B = row.Cell(19).GetString(),
+                CLASIFICACION = ObtenerValorCelda(row.Cell(6)),
+                NOMBRE_DE_LA_EMPRESA = ObtenerValorCelda(row.Cell(7)),
+                GIRO = ObtenerValorCelda(row.Cell(8)),
+                SECTOR = ObtenerValorCelda(row.Cell(9)),
+                ESTADO = ObtenerValorCelda(row.Cell(10)),
+                CIUDAD = ObtenerValorCelda(row.Cell(11)),
+                DOMICILIO = ObtenerValorCelda(row.Cell(12)),
+                CONTACTO = ObtenerValorCelda(row.Cell(13)),
+                PUESTO = ObtenerValorCelda(row.Cell(14)),
+                EMAIL = ObtenerValorCelda(row.Cell(15)),
+                TELEFONO = ObtenerValorCelda(row.Cell(16)),
+                WHATSAPP = ObtenerValorCelda(row.Cell(17)),
+                FUENTE_DE_INFORMACION = ObtenerValorCelda(row.Cell(18)),
+                B2B = ObtenerValorCelda(row.Cell(19)),
                 FECHA_DE_VISITA = row.Cell(20).TryGetValue(out DateTime fechaVisita) ? fechaVisita : null,
-                OPORTUNIDAD = row.Cell(21).GetString()
+                OPORTUNIDAD = ObtenerValorCelda(row.Cell(21))
             };
 
             datos.Add(baseDatos);
@@ -127,13 +160,13 @@ public class ExcelReader : IExcelReader
 
             var planeacion = new PlaneacionRow
             {
-                RESPONSABLE = row.Cell(2).GetString(),
-                REGION = row.Cell(3).GetString(),
-                SEMANA = row.Cell(4).GetString(),
+                RESPONSABLE = ObtenerValorCelda(row.Cell(2)),
+                REGION = ObtenerValorCelda(row.Cell(3)),
+                SEMANA = ObtenerValorCelda(row.Cell(4)),
                 FECHA = row.Cell(5).TryGetValue(out DateTime fecha) ? fecha : null,
-                NOMBRE_DE_LA_EMPRESA = row.Cell(6).GetString(),
-                FUENTE_DE_INFORMACION = row.Cell(7).GetString(),
-                COMENTARIOS = row.Cell(8).GetString()
+                NOMBRE_DE_LA_EMPRESA = ObtenerValorCelda(row.Cell(6)),
+                FUENTE_DE_INFORMACION = ObtenerValorCelda(row.Cell(7)),
+                COMENTARIOS = ObtenerValorCelda(row.Cell(8))
             };
 
             datos.Add(planeacion);
@@ -167,15 +200,15 @@ public class ExcelReader : IExcelReader
 
             var reporte = new ReporteRow
             {
-                RESPONSABLE = row.Cell(2).GetString(),
-                REGION = row.Cell(3).GetString(),
-                SEMANA = row.Cell(4).GetString(),
+                RESPONSABLE = ObtenerValorCelda(row.Cell(2)),
+                REGION = ObtenerValorCelda(row.Cell(3)),
+                SEMANA = ObtenerValorCelda(row.Cell(4)),
                 FECHA = row.Cell(5).TryGetValue(out DateTime fecha) ? fecha : null,
-                NOMBRE_DE_LA_EMPRESA = row.Cell(6).GetString(),
-                FUENTE_DE_INFORMACION = row.Cell(7).GetString(),
-                ACTIVIDAD_PROGRAMADA = row.Cell(8).GetString(),
-                COMENTARIOS = row.Cell(9).GetString(),
-                NECESIDAD_DETECTADA = row.Cell(10).GetString()
+                NOMBRE_DE_LA_EMPRESA = ObtenerValorCelda(row.Cell(6)),
+                FUENTE_DE_INFORMACION = ObtenerValorCelda(row.Cell(7)),
+                ACTIVIDAD_PROGRAMADA = ObtenerValorCelda(row.Cell(8)),
+                COMENTARIOS = ObtenerValorCelda(row.Cell(9)),
+                NECESIDAD_DETECTADA = ObtenerValorCelda(row.Cell(10))
             };
 
             datos.Add(reporte);

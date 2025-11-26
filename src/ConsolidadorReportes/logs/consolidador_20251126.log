@@ -1,0 +1,297 @@
+2025-11-26 12:40:06.682 -06:00 [INF] Iniciando aplicacion Consolidador de Reportes
+2025-11-26 12:40:06.763 -06:00 [FTL] Error fatal en la aplicacion
+System.InvalidOperationException: Unable to resolve service for type 'ConsolidadorReportes.Configuration.AppSettings' while attempting to activate 'ConsolidadorReportes.Services.BackupService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at ConsolidadorReportes.Program.Main(String[] args) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Program.cs:line 49
+2025-11-26 12:40:59.930 -06:00 [INF] Iniciando aplicacion Consolidador de Reportes
+2025-11-26 12:41:00.024 -06:00 [INF] ========================================
+2025-11-26 12:41:00.024 -06:00 [INF] INICIANDO CONSOLIDACIÓN DE REPORTES v2.0
+2025-11-26 12:41:00.024 -06:00 [INF] Modo: Renumeración INCREMENTAL
+2025-11-26 12:41:00.024 -06:00 [INF] ========================================
+2025-11-26 12:41:00.025 -06:00 [INF] Escaneando directorio raíz: .
+2025-11-26 12:41:00.028 -06:00 [INF] Total de archivos válidos encontrados: 0
+2025-11-26 12:41:00.031 -06:00 [WRN] No se encontraron archivos para procesar
+2025-11-26 12:41:00.033 -06:00 [INF] Proceso completado exitosamente
+2025-11-26 12:42:06.526 -06:00 [INF] Iniciando aplicacion Consolidador de Reportes
+2025-11-26 12:42:06.610 -06:00 [INF] ========================================
+2025-11-26 12:42:06.610 -06:00 [INF] INICIANDO CONSOLIDACIÓN DE REPORTES v2.0
+2025-11-26 12:42:06.610 -06:00 [INF] Modo: Renumeración INCREMENTAL
+2025-11-26 12:42:06.610 -06:00 [INF] ========================================
+2025-11-26 12:42:06.611 -06:00 [INF] Escaneando directorio raíz: c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores
+2025-11-26 12:42:06.632 -06:00 [INF] Total de archivos válidos encontrados: 2
+2025-11-26 12:42:06.666 -06:00 [INF] Archivo maestro no existe, último NUM = 0
+2025-11-26 12:42:06.666 -06:00 [INF] Archivo maestro no existe, último NUM = 0
+2025-11-26 12:42:06.666 -06:00 [INF] Archivo maestro no existe, último NUM = 0
+2025-11-26 12:42:06.666 -06:00 [INF] ----------------------------------------
+2025-11-26 12:42:06.666 -06:00 [INF] Último NUM en maestro:
+2025-11-26 12:42:06.666 -06:00 [INF]   BASE DE DATOS: 0
+2025-11-26 12:42:06.667 -06:00 [INF]   PLANEACION: 0
+2025-11-26 12:42:06.667 -06:00 [INF]   REPORTE: 0
+2025-11-26 12:42:06.667 -06:00 [INF] ----------------------------------------
+2025-11-26 12:42:06.667 -06:00 [INF] [1/2] Procesando: REPORTE SEMANAL centro.xlsx
+2025-11-26 12:42:06.667 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL centro.xlsx
+2025-11-26 12:42:09.670 -06:00 [INF] [2/2] Procesando: REPORTE SEMANAL norte.xlsx
+2025-11-26 12:42:09.670 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL norte.xlsx
+2025-11-26 12:42:09.715 -06:00 [INF] ----------------------------------------
+2025-11-26 12:42:09.716 -06:00 [INF] Consolidando datos...
+2025-11-26 12:42:09.718 -06:00 [INF]   BASE DE DATOS: 2 filas (NUM 1-2)
+2025-11-26 12:42:09.718 -06:00 [INF]   PLANEACION: 6 filas (NUM 1-6)
+2025-11-26 12:42:09.718 -06:00 [INF]   REPORTE: 3 filas (NUM 1-3)
+2025-11-26 12:42:09.718 -06:00 [INF] ----------------------------------------
+2025-11-26 12:42:09.718 -06:00 [INF] Escribiendo archivo maestro (modo APPEND)...
+2025-11-26 12:42:09.720 -06:00 [INF] Creando archivo maestro nuevo
+2025-11-26 12:42:09.913 -06:00 [INF]   ✓ BASE DE DATOS: 2 filas escritas
+2025-11-26 12:42:09.917 -06:00 [INF]   ✓ PLANEACION: 6 filas escritas
+2025-11-26 12:42:09.919 -06:00 [INF]   ✓ REPORTE: 3 filas escritas
+2025-11-26 12:42:10.099 -06:00 [INF] ✓ Archivo maestro guardado: consolidado_maestro.xlsx
+2025-11-26 12:42:10.100 -06:00 [INF] ========================================
+2025-11-26 12:42:10.100 -06:00 [INF] RESUMEN FINAL
+2025-11-26 12:42:10.100 -06:00 [INF] ========================================
+2025-11-26 12:42:10.100 -06:00 [INF] Archivos procesados: 2/2
+2025-11-26 12:42:10.100 -06:00 [INF] Archivos con errores: 0
+2025-11-26 12:42:10.101 -06:00 [INF] 
+2025-11-26 12:42:10.101 -06:00 [INF] Tiempo de ejecución: "00:00:03.4898013"
+2025-11-26 12:42:10.103 -06:00 [INF] ========================================
+2025-11-26 12:42:10.107 -06:00 [INF] Proceso completado exitosamente
+2025-11-26 13:06:35.513 -06:00 [INF] Iniciando aplicacion Consolidador de Reportes
+2025-11-26 13:06:35.622 -06:00 [INF] ========================================
+2025-11-26 13:06:35.622 -06:00 [INF] INICIANDO CONSOLIDACIÓN DE REPORTES v2.0
+2025-11-26 13:06:35.622 -06:00 [INF] Modo: Renumeración INCREMENTAL
+2025-11-26 13:06:35.622 -06:00 [INF] ========================================
+2025-11-26 13:06:35.623 -06:00 [INF] Escaneando directorio raíz: c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores
+2025-11-26 13:06:35.654 -06:00 [INF] Total de archivos válidos encontrados: 2
+2025-11-26 13:06:35.736 -06:00 [ERR] Error al leer último NUM de BASE DE DATOS
+System.IO.IOException: The process cannot access the file 'c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\consolidado_maestro.xlsx' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Packaging.ZipPackage..ctor(String path, FileMode packageFileMode, FileAccess packageFileAccess, FileShare share)
+   at System.IO.Packaging.Package.Open(String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare)
+   at DocumentFormat.OpenXml.Packaging.PackageLoader.OpenCore(String path, Boolean readWriteMode)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(String fileName)
+   at ClosedXML.Excel.XLWorkbook.Load(String file)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file)
+   at ConsolidadorReportes.Repositories.ExcelReader.ObtenerUltimoNum(String rutaMaestro, String nombreHoja) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Repositories\ExcelReader.cs:line 198
+2025-11-26 13:06:35.752 -06:00 [ERR] Error al leer último NUM de PLANEACION
+System.IO.IOException: The process cannot access the file 'c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\consolidado_maestro.xlsx' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Packaging.ZipPackage..ctor(String path, FileMode packageFileMode, FileAccess packageFileAccess, FileShare share)
+   at System.IO.Packaging.Package.Open(String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare)
+   at DocumentFormat.OpenXml.Packaging.PackageLoader.OpenCore(String path, Boolean readWriteMode)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(String fileName)
+   at ClosedXML.Excel.XLWorkbook.Load(String file)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file)
+   at ConsolidadorReportes.Repositories.ExcelReader.ObtenerUltimoNum(String rutaMaestro, String nombreHoja) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Repositories\ExcelReader.cs:line 198
+2025-11-26 13:06:35.752 -06:00 [ERR] Error al leer último NUM de REPORTE
+System.IO.IOException: The process cannot access the file 'c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\consolidado_maestro.xlsx' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Packaging.ZipPackage..ctor(String path, FileMode packageFileMode, FileAccess packageFileAccess, FileShare share)
+   at System.IO.Packaging.Package.Open(String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare)
+   at DocumentFormat.OpenXml.Packaging.PackageLoader.OpenCore(String path, Boolean readWriteMode)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(String fileName)
+   at ClosedXML.Excel.XLWorkbook.Load(String file)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file)
+   at ConsolidadorReportes.Repositories.ExcelReader.ObtenerUltimoNum(String rutaMaestro, String nombreHoja) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Repositories\ExcelReader.cs:line 198
+2025-11-26 13:06:35.753 -06:00 [INF] ----------------------------------------
+2025-11-26 13:06:35.753 -06:00 [INF] Último NUM en maestro:
+2025-11-26 13:06:35.753 -06:00 [INF]   BASE DE DATOS: 0
+2025-11-26 13:06:35.753 -06:00 [INF]   PLANEACION: 0
+2025-11-26 13:06:35.753 -06:00 [INF]   REPORTE: 0
+2025-11-26 13:06:35.753 -06:00 [INF] ----------------------------------------
+2025-11-26 13:06:35.762 -06:00 [INF] Backup maestro creado: maestro_backup_20251126_130635.xlsx
+2025-11-26 13:06:35.763 -06:00 [INF] [1/2] Procesando: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:06:35.764 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:06:36.723 -06:00 [INF] [2/2] Procesando: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:06:36.723 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:06:36.751 -06:00 [INF] ----------------------------------------
+2025-11-26 13:06:36.751 -06:00 [INF] Consolidando datos...
+2025-11-26 13:06:36.753 -06:00 [INF]   BASE DE DATOS: 2 filas (NUM 1-2)
+2025-11-26 13:06:36.753 -06:00 [INF]   PLANEACION: 6 filas (NUM 1-6)
+2025-11-26 13:06:36.753 -06:00 [INF]   REPORTE: 3 filas (NUM 1-3)
+2025-11-26 13:06:36.753 -06:00 [INF] ----------------------------------------
+2025-11-26 13:06:36.753 -06:00 [INF] Escribiendo archivo maestro (modo APPEND)...
+2025-11-26 13:06:36.756 -06:00 [FTL] Error crítico en consolidación
+System.IO.IOException: The process cannot access the file 'c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\consolidado_maestro.xlsx' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Packaging.ZipPackage..ctor(String path, FileMode packageFileMode, FileAccess packageFileAccess, FileShare share)
+   at System.IO.Packaging.Package.Open(String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare)
+   at DocumentFormat.OpenXml.Packaging.PackageLoader.OpenCore(String path, Boolean readWriteMode)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(String fileName)
+   at ClosedXML.Excel.XLWorkbook.Load(String file)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file)
+   at ConsolidadorReportes.Repositories.ExcelWriter.<>c__DisplayClass3_0.<EscribirMaestroAsync>b__0() in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Repositories\ExcelWriter.cs:line 29
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at ConsolidadorReportes.Repositories.ExcelWriter.EscribirMaestroAsync(String rutaMaestro, ConsolidacionResult consolidado) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Repositories\ExcelWriter.cs:line 22
+   at ConsolidadorReportes.Services.ConsolidadorService.ConsolidarAsync(String directorioRaiz, String rutaMaestro) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Services\ConsolidadorService.cs:line 140
+2025-11-26 13:06:36.760 -06:00 [FTL] Error fatal en la aplicacion
+System.IO.IOException: The process cannot access the file 'c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\consolidado_maestro.xlsx' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.Packaging.ZipPackage..ctor(String path, FileMode packageFileMode, FileAccess packageFileAccess, FileShare share)
+   at System.IO.Packaging.Package.Open(String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare)
+   at DocumentFormat.OpenXml.Packaging.PackageLoader.OpenCore(String path, Boolean readWriteMode)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(String path, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(String fileName)
+   at ClosedXML.Excel.XLWorkbook.Load(String file)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(String file)
+   at ConsolidadorReportes.Repositories.ExcelWriter.<>c__DisplayClass3_0.<EscribirMaestroAsync>b__0() in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Repositories\ExcelWriter.cs:line 29
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at ConsolidadorReportes.Repositories.ExcelWriter.EscribirMaestroAsync(String rutaMaestro, ConsolidacionResult consolidado) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Repositories\ExcelWriter.cs:line 22
+   at ConsolidadorReportes.Services.ConsolidadorService.ConsolidarAsync(String directorioRaiz, String rutaMaestro) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Services\ConsolidadorService.cs:line 140
+   at ConsolidadorReportes.Program.Main(String[] args) in C:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores\src\ConsolidadorReportes\Program.cs:line 50
+2025-11-26 13:10:22.274 -06:00 [INF] Iniciando aplicacion Consolidador de Reportes
+2025-11-26 13:10:22.359 -06:00 [INF] ========================================
+2025-11-26 13:10:22.359 -06:00 [INF] INICIANDO CONSOLIDACIÓN DE REPORTES v2.0
+2025-11-26 13:10:22.359 -06:00 [INF] Modo: Renumeración INCREMENTAL
+2025-11-26 13:10:22.359 -06:00 [INF] ========================================
+2025-11-26 13:10:22.360 -06:00 [INF] Escaneando directorio raíz: c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores
+2025-11-26 13:10:22.384 -06:00 [INF] Total de archivos válidos encontrados: 2
+2025-11-26 13:10:23.052 -06:00 [INF] Último NUM en BASE DE DATOS: 2
+2025-11-26 13:10:23.071 -06:00 [INF] Último NUM en PLANEACION: 6
+2025-11-26 13:10:23.078 -06:00 [INF] Último NUM en REPORTE: 3
+2025-11-26 13:10:23.078 -06:00 [INF] ----------------------------------------
+2025-11-26 13:10:23.078 -06:00 [INF] Último NUM en maestro:
+2025-11-26 13:10:23.078 -06:00 [INF]   BASE DE DATOS: 2
+2025-11-26 13:10:23.078 -06:00 [INF]   PLANEACION: 6
+2025-11-26 13:10:23.078 -06:00 [INF]   REPORTE: 3
+2025-11-26 13:10:23.079 -06:00 [INF] ----------------------------------------
+2025-11-26 13:10:23.085 -06:00 [INF] Backup maestro creado: maestro_backup_20251126_131023.xlsx
+2025-11-26 13:10:23.086 -06:00 [INF] [1/2] Procesando: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:10:23.086 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:10:23.287 -06:00 [INF] [2/2] Procesando: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:10:23.287 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:10:23.315 -06:00 [INF] ----------------------------------------
+2025-11-26 13:10:23.315 -06:00 [INF] Consolidando datos...
+2025-11-26 13:10:23.317 -06:00 [INF]   BASE DE DATOS: 2 filas (NUM 3-4)
+2025-11-26 13:10:23.317 -06:00 [INF]   PLANEACION: 6 filas (NUM 7-12)
+2025-11-26 13:10:23.317 -06:00 [INF]   REPORTE: 3 filas (NUM 4-6)
+2025-11-26 13:10:23.317 -06:00 [INF] ----------------------------------------
+2025-11-26 13:10:23.317 -06:00 [INF] Escribiendo archivo maestro (modo APPEND)...
+2025-11-26 13:10:23.327 -06:00 [INF] Archivo maestro existente abierto (modo APPEND)
+2025-11-26 13:10:23.333 -06:00 [INF]   ✓ BASE DE DATOS: 2 filas escritas
+2025-11-26 13:10:23.334 -06:00 [INF]   ✓ PLANEACION: 6 filas escritas
+2025-11-26 13:10:23.335 -06:00 [INF]   ✓ REPORTE: 3 filas escritas
+2025-11-26 13:10:23.456 -06:00 [INF] ✓ Archivo maestro guardado: consolidado_maestro.xlsx
+2025-11-26 13:10:23.457 -06:00 [INF] ========================================
+2025-11-26 13:10:23.457 -06:00 [INF] RESUMEN FINAL
+2025-11-26 13:10:23.457 -06:00 [INF] ========================================
+2025-11-26 13:10:23.457 -06:00 [INF] Archivos procesados: 2/2
+2025-11-26 13:10:23.457 -06:00 [INF] Archivos con errores: 0
+2025-11-26 13:10:23.457 -06:00 [INF] 
+2025-11-26 13:10:23.458 -06:00 [INF] Tiempo de ejecución: "00:00:01.0982372"
+2025-11-26 13:10:23.460 -06:00 [INF] ========================================
+2025-11-26 13:10:23.464 -06:00 [INF] Proceso completado exitosamente
+2025-11-26 13:11:53.649 -06:00 [INF] Iniciando aplicacion Consolidador de Reportes
+2025-11-26 13:11:53.732 -06:00 [INF] ========================================
+2025-11-26 13:11:53.732 -06:00 [INF] INICIANDO CONSOLIDACIÓN DE REPORTES v2.0
+2025-11-26 13:11:53.732 -06:00 [INF] Modo: Renumeración INCREMENTAL
+2025-11-26 13:11:53.732 -06:00 [INF] ========================================
+2025-11-26 13:11:53.733 -06:00 [INF] Escaneando directorio raíz: c:\Users\E-IPC-L_36\Desktop\PROYECTOS\Exceles_vendedores\planeacion_vendedores
+2025-11-26 13:11:53.754 -06:00 [INF] Total de archivos válidos encontrados: 2
+2025-11-26 13:11:54.381 -06:00 [INF] Último NUM en BASE DE DATOS: 4
+2025-11-26 13:11:54.402 -06:00 [INF] Último NUM en PLANEACION: 12
+2025-11-26 13:11:54.409 -06:00 [INF] Último NUM en REPORTE: 6
+2025-11-26 13:11:54.410 -06:00 [INF] ----------------------------------------
+2025-11-26 13:11:54.410 -06:00 [INF] Último NUM en maestro:
+2025-11-26 13:11:54.410 -06:00 [INF]   BASE DE DATOS: 4
+2025-11-26 13:11:54.410 -06:00 [INF]   PLANEACION: 12
+2025-11-26 13:11:54.410 -06:00 [INF]   REPORTE: 6
+2025-11-26 13:11:54.410 -06:00 [INF] ----------------------------------------
+2025-11-26 13:11:54.417 -06:00 [INF] Backup maestro creado: maestro_backup_20251126_131154.xlsx
+2025-11-26 13:11:54.418 -06:00 [INF] [1/2] Procesando: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:11:54.418 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:11:54.619 -06:00 [INF] [2/2] Procesando: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:11:54.619 -06:00 [INF] Leyendo archivo: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:11:54.648 -06:00 [INF] ----------------------------------------
+2025-11-26 13:11:54.648 -06:00 [INF] Consolidando datos...
+2025-11-26 13:11:54.650 -06:00 [INF]   BASE DE DATOS: 2 filas (NUM 5-6)
+2025-11-26 13:11:54.651 -06:00 [INF]   PLANEACION: 6 filas (NUM 13-18)
+2025-11-26 13:11:54.651 -06:00 [INF]   REPORTE: 3 filas (NUM 7-9)
+2025-11-26 13:11:54.651 -06:00 [INF] ----------------------------------------
+2025-11-26 13:11:54.651 -06:00 [INF] Escribiendo archivo maestro (modo APPEND)...
+2025-11-26 13:11:54.659 -06:00 [INF] Archivo maestro existente abierto (modo APPEND)
+2025-11-26 13:11:54.665 -06:00 [INF]   ✓ BASE DE DATOS: 2 filas escritas
+2025-11-26 13:11:54.666 -06:00 [INF]   ✓ PLANEACION: 6 filas escritas
+2025-11-26 13:11:54.666 -06:00 [INF]   ✓ REPORTE: 3 filas escritas
+2025-11-26 13:11:54.781 -06:00 [INF] ✓ Archivo maestro guardado: consolidado_maestro.xlsx
+2025-11-26 13:11:54.783 -06:00 [INF] ----------------------------------------
+2025-11-26 13:11:54.783 -06:00 [INF] Limpiando archivos origen...
+2025-11-26 13:11:54.783 -06:00 [INF] [1/2] Limpiando: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:11:54.788 -06:00 [INF] Iniciando limpieza de archivo: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:11:54.821 -06:00 [INF] BASE DE DATOS: No hay datos para borrar (solo encabezados y fila de formulas)
+2025-11-26 13:11:54.856 -06:00 [INF] PLANEACION: preservada fila 6 (3 formulas), borradas filas 7-8
+2025-11-26 13:11:54.858 -06:00 [INF] REPORTE: preservada fila 6 (3 formulas), borradas filas 7-7
+2025-11-26 13:11:54.938 -06:00 [INF] Archivo limpiado correctamente: REPORTE SEMANAL centro.xlsx
+2025-11-26 13:11:54.939 -06:00 [INF] [2/2] Limpiando: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:11:54.941 -06:00 [INF] Iniciando limpieza de archivo: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:11:54.973 -06:00 [INF] BASE DE DATOS: No hay datos para borrar (solo encabezados y fila de formulas)
+2025-11-26 13:11:54.976 -06:00 [INF] PLANEACION: preservada fila 6 (3 formulas), borradas filas 7-8
+2025-11-26 13:11:54.976 -06:00 [INF] REPORTE: No hay datos para borrar (solo encabezados y fila de formulas)
+2025-11-26 13:11:55.016 -06:00 [INF] Archivo limpiado correctamente: REPORTE SEMANAL norte.xlsx
+2025-11-26 13:11:55.017 -06:00 [INF] ========================================
+2025-11-26 13:11:55.017 -06:00 [INF] RESUMEN FINAL
+2025-11-26 13:11:55.017 -06:00 [INF] ========================================
+2025-11-26 13:11:55.017 -06:00 [INF] Archivos procesados: 2/2
+2025-11-26 13:11:55.017 -06:00 [INF] Archivos con errores: 0
+2025-11-26 13:11:55.017 -06:00 [INF] 
+2025-11-26 13:11:55.017 -06:00 [INF] Tiempo de ejecución: "00:00:01.2846791"
+2025-11-26 13:11:55.020 -06:00 [INF] ========================================
+2025-11-26 13:11:55.025 -06:00 [INF] Proceso completado exitosamente

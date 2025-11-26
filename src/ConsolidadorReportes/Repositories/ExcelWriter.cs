@@ -2,6 +2,7 @@ using ClosedXML.Excel;
 using Serilog;
 using ConsolidadorReportes.Configuration;
 using ConsolidadorReportes.Models;
+using Microsoft.Extensions.Options;
 
 namespace ConsolidadorReportes.Repositories;
 
@@ -10,10 +11,10 @@ public class ExcelWriter : IExcelWriter
     private readonly ILogger _logger;
     private readonly AppSettings _settings;
 
-    public ExcelWriter(ILogger logger, AppSettings settings)
+    public ExcelWriter(ILogger logger, IOptions<AppSettings> settings)
     {
         _logger = logger;
-        _settings = settings;
+        _settings = settings.Value;
     }
 
     public async Task EscribirMaestroAsync(string rutaMaestro, ConsolidacionResult consolidado)
